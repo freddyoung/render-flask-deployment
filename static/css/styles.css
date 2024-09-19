@@ -92,6 +92,7 @@ body.default-page main {
 .logo-container {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .logo-container img {
@@ -123,6 +124,46 @@ body.default-page .company-name {
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+/* Mobile Styles for Header */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo-container {
+        flex: 1; /* Ensure logo takes up space without being crowded */
+        margin-right: auto;
+    }
+    .logo-container img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        margin-left: auto; /* Ensure the burger menu stays on the right */
+        z-index: 2;
+    }
+
+    /* Ensure logo and burger don't overlap */
+    .logo-container img {
+        max-width: 50px; /* Adjust logo size for smaller screens */
+        height: 50px;
+    }
+    
+    .burger-menu {
+        z-index: 2; /* Ensure burger menu stays above content */
+    }
 }
 
 /* Navigation Menu */
@@ -332,6 +373,10 @@ footer p {
 
     .main-nav ul li a {
         color: inherit; /* Inherit color based on page */
+    }
+
+    nav ul {
+        display: none;
     }
 
     .burger-menu {
