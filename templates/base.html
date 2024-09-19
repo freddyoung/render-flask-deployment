@@ -24,7 +24,7 @@
         <div class="container">
             <div class="logo-container">
                 <a href="{{ url_for('home') }}" class="logo-link">
-                    <img src="{% if request.endpoint == 'home' %}{{ url_for('static', filename='images/ypi_logo_white.png') }}{% else %}{{ url_for('static', filename='images/ypi_logo.png') }}{% endif %}" alt="Company Logo" id="logo-image">                    <span class="company-name">Young Properties Investment Ltd.</span>
+                    <img src="{% if request.endpoint == 'home' %}{{ url_for('static', filename='images/ypi_logo_white.png') }}{% else %}{{ url_for('static', filename='images/ypi_logo.png') }}{% endif %}" alt="Company Logo" id="logo-image">                    <span class="company-name">Young Properties<br>Investment Ltd.</span>
                 </a>
             </div>      
             <nav class="main-nav">
