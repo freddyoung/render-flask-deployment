@@ -110,6 +110,18 @@ header.scrolled .logo-container img {
     color: white; /* Inherit color based on the navbar state */
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .company-name {
+        white-space: normal; /* Allows text to wrap on smaller screens */
+    }
+
+    .company-name::after {
+        content: "\A"; /* Inserts a line break */
+        white-space: pre; /* Ensures the break is respected */
+        display: inline;
+    }
 }
 
 header.scrolled .company-name {
@@ -159,10 +171,6 @@ body.default-page .company-name {
     .logo-container img {
         max-width: 50px; /* Adjust logo size for smaller screens */
         height: 50px;
-    }
-    
-    .burger-menu {
-        z-index: 2; /* Ensure burger menu stays above content */
     }
 }
 
