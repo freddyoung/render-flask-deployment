@@ -105,24 +105,31 @@ header.scrolled .logo-container img {
     height: 50px;
 }
 
+/* Default style for larger screens (no break) */
 .company-name {
     font-size: 18px;
-    color: white; /* Inherit color based on the navbar state */
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    white-space: nowrap;
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping */
 }
+
 @media (max-width: 768px) {
     .company-name {
-        white-space: normal; /* Allows text to wrap on smaller screens */
+        white-space: normal; /* Allow text to wrap on smaller screens */
     }
 
-    .company-name::after {
-        content: "\A"; /* Inserts a line break */
-        white-space: pre; /* Ensures the break is respected */
-        display: inline;
+    .first-part::after {
+        content: "";
+        display: block; /* Forces line break after 'Young Properties' */
+    }
+
+    .second-part {
+        display: inline-block;
     }
 }
+
 
 header.scrolled .company-name {
     color: #16b34d; /* Green after scrolling */
