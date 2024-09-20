@@ -3,30 +3,57 @@
 {% block title %}Home - Property Management{% endblock %}
 
 {% block content %}
-<!-- Services Overview Section with Icons -->
-<section class="services-overview">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="services-list">
-            <a href="{{ url_for('services') }}" class="service-item">
-                <img src="{{ url_for('static', filename='images/manage.png') }}" alt="Property Management">
-                <p>Property Management</p>
-            </a>
-            <a href="{{ url_for('services') }}" class="service-item">
-                <img src="{{ url_for('static', filename='images/construction.png') }}" alt="Construction Services">
-                <p>Construction Services</p>
-            </a>
-            <a href="{{ url_for('services') }}" class="service-item">
-                <img src="{{ url_for('static', filename='images/ppp.png') }}" alt="Maintenance & Repairs">
-                <p>Maintenance & Repairs</p>
-            </a>
-            <a href="{{ url_for('services') }}" class="service-item">
-                <img src="{{ url_for('static', filename='images/qqq.png') }}" alt="Tenant Relations">
-                <p>Tenant Relations</p>
-            </a>
+<section class="about-section">
+    <div class="about-content">
+        <!-- Left container: Heading, subheading, and button -->
+        <div class="about-left">
+            <h2>About Us</h2>
+            <h3>Your Trusted Property Partners</h3>
+        </div>
+
+        <!-- Right container: Brief company paragraph -->
+        <div class="about-right">
+            <p>Young Properties Investment Ltd. is a premier property management company offering a range of services, including construction, maintenance, and property management. Our team is dedicated to providing exceptional service and ensuring the best outcomes for our clients.</p>
+            <a href="{{ url_for('about') }}" class="btn-learn-more">Learn More</a> <!-- Button moved under heading -->
+
         </div>
     </div>
 </section>
+
+
+
+<!-- Services Overview Section with Icons -->
+<section class="services-overview">
+    <div class="services-content">
+        <!-- Left side: Heading and subheading -->
+        <div class="services-left">
+
+        </div>
+
+        <!-- Right side: Services icons -->
+        <div class="services-right">
+            <div class="services-list">
+                <a href="{{ url_for('services') }}" class="service-item">
+                    <img src="{{ url_for('static', filename='images/manage.png') }}" alt="Property Management">
+                    <p>Property Management</p>
+                </a>
+                <a href="{{ url_for('services') }}" class="service-item">
+                    <img src="{{ url_for('static', filename='images/construction.png') }}" alt="Construction Services">
+                    <p>Construction Services</p>
+                </a>
+                <a href="{{ url_for('services') }}" class="service-item">
+                    <img src="{{ url_for('static', filename='images/ppp.png') }}" alt="Maintenance & Repairs">
+                    <p>Maintenance & Repairs</p>
+                </a>
+                <a href="{{ url_for('services') }}" class="service-item">
+                    <img src="{{ url_for('static', filename='images/qqq.png') }}" alt="Tenant Relations">
+                    <p>Tenant Relations</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="swiper-container">
     <div class="swiper-wrapper">
