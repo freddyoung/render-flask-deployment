@@ -129,6 +129,9 @@ header.scrolled .logo-container img {
     .second-part {
         display: inline-block;
     }
+    .navbar-home {
+        padding: 10px 0px;
+    }
 }
 
 
@@ -342,19 +345,17 @@ body.default-page .burger-menu span {
     .hero-content {
         flex-direction: column; /* Stack elements vertically on mobile */
         align-items: center; /* Center content */
-        text-align: center; /* Center text */
-        padding-right: 50px;
+        text-align: left; /* Center text */
+        padding: 0 25px;
         width: 100%;
     }
     .hero-text {
         margin-top: 150px; /* Adjust this value to move tagline higher */
         margin-bottom: 20px; /* Space below tagline for the paragraph */
     }
-    .hero-actions {
-        padding-left: 150px;
-    }
+
     .hero-text h1 {
-        font-size: 42px;
+        font-size: 48px;
 
     }
 }
