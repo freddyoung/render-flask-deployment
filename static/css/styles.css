@@ -172,6 +172,7 @@ body.default-page .company-name {
         cursor: pointer;
         margin-left: auto; /* Ensure the burger menu stays on the right */
         z-index: 2;
+
     }
 
     /* Ensure logo and burger don't overlap */
@@ -234,7 +235,6 @@ header.scrolled nav ul li a::after {
     height: 21px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
     position: relative;
 }
 
@@ -246,6 +246,7 @@ header.scrolled nav ul li a::after {
 
     transition: all 0.3s ease;
     position: relative;
+
 }
 .burger-menu.open span:nth-child(1) {
     transform: rotate(45deg);
@@ -271,6 +272,9 @@ header.scrolled .burger-menu span {
 body.default-page .burger-menu span {
     background-color: #16b34d; /* Green burger menu */
 }
+
+
+
 
 /* Hero section for homepage */
 .hero-background {
@@ -400,6 +404,7 @@ footer p {
 
     .burger-menu span {
         background-color: white;
+        
     }
 
     header.scrolled .burger-menu span {
@@ -410,8 +415,12 @@ footer p {
 .about-section {
     padding: 60px 20px;
     background-color: #f0f0f0;
-    border-radius: 20px;
+    border-top-left-radius: 20px;  /* Apply border radius to top left */
+    border-top-right-radius: 20px; /* Apply border radius to top right */
+    border-bottom-left-radius: 0;  /* No radius on bottom left */
+    border-bottom-right-radius: 0; /* No radius on bottom right */
 }
+
 
 .about-content {
     display: flex;
@@ -563,7 +572,6 @@ footer p {
 
 .service-item p {
     font-size: 22px;
-    font-weight: bold;
     color: #16b34d;
     margin: 0;
 }
@@ -585,16 +593,26 @@ footer p {
     }
 
     .services-list {
-        justify-content: center; /* Center the icons */
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr); /* Maintain two icons per row */
+        gap: 30px; /* Keep consistent gap for mobile */
     }
 
     .service-item {
-        width: 100%; /* Ensure the icons wrap properly on mobile */
+        width: 100%; /* Ensure icons fit within their grid cells */
+        justify-content: center; /* Center content within the grid */
     }
-
     .services-left h2, .services-left h3 {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* For tablet view: 2 items per row */
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two icons per row */
+        gap: 30px; /* Adjust the spacing between icons */
+        justify-items: center; /* Center the icons in each grid cell */
     }
 }
 
