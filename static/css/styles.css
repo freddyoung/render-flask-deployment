@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     max-width: 100vw;
+
 }
 section {
     margin-right: 0;
@@ -59,7 +60,7 @@ body.default-page main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 60px;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -96,18 +97,18 @@ body.default-page main {
 }
 
 .logo-container img {
-    height: 50px;
+    height: 60px;
     margin-right: 10px;
     transition: all 0.3s ease;
 }
 
 header.scrolled .logo-container img {
-    height: 50px;
+    height: 60px;
 }
 
 /* Default style for larger screens (no break) */
 .company-name {
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
@@ -178,7 +179,7 @@ body.default-page .company-name {
     /* Ensure logo and burger don't overlap */
     .logo-container img {
         max-width: 50px; /* Adjust logo size for smaller screens */
-        height: 50px;
+        height: 60px;
     }
 }
 
@@ -273,43 +274,55 @@ body.default-page .burger-menu span {
     background-color: #16b34d; /* Green burger menu */
 }
 
-
-
-
-/* Hero section for homepage */
+/* Hero Section */
 .hero-background {
     background-image: url('../images/bgk10.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    text-align: center;
-
+    text-align: left; /* Align text to the left */
 }
 
-.hero-content h1 {
-    font-size: 38px;
+.hero-content {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center; /* Center items vertically */
+    width: 50%; /* Full width */
+    padding: 0 80px; /* Add side padding */
+}
+
+.hero-text {
+    width: 100%; /* Take half of the space */
+    display: flex;
+    flex-direction: column; /* Stack tagline and paragraph */
+    justify-content: center; /* Center vertically */
+}
+
+.hero-text h1 {
+    font-size: 72px;
     font-style: italic;
     font-family: 'Ogg', serif;
-    margin-top: -25px;
+    font-weight: bolder;
     margin-bottom: 10px;
-    font-weight:bolder;
 }
 
-.hero-content p {
+.hero-text p {
     font-size: 18px;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
-/* Button styling for "Make An Enquiry Today!" */
-/* Button styling for "Make An Enquiry Today!" */
+
+.hero-actions {
+    margin-top: 20px; /* Space between paragraph and button */
+    align-self: flex-start; /* Align button to the left */
+}
+
 .btn-enquiry {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #16b34d; /* Transparent background */
-    color: #ffffff; /* Green text */
+    background-color: #16b34d; /* Green background */
+    color: #ffffff; /* White text */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -319,11 +332,33 @@ body.default-page .burger-menu span {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-/* Hover effect for the button */
 .btn-enquiry:hover {
-    background-color: #11b44ac5; /* Green background on hover */
+    background-color: #11b44ac5; /* Darker green on hover */
     color: white; /* White text on hover */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
+        padding-right: 50px;
+        width: 100%;
+    }
+    .hero-text {
+        margin-top: 150px; /* Adjust this value to move tagline higher */
+        margin-bottom: 20px; /* Space below tagline for the paragraph */
+    }
+    .hero-actions {
+        padding-left: 150px;
+    }
+    .hero-text h1 {
+        font-size: 42px;
+
+    }
+}
+
 
 
 /* Main Content */
@@ -438,7 +473,7 @@ footer p {
 
 /* Styling for Heading and Subheading */
 .about-left h2 {
-    font-size: 36px;
+    font-size: 32px;
     color: #16b34d;
 }
 

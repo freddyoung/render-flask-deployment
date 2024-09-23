@@ -54,9 +54,18 @@
     {% if request.endpoint == 'home' %}
     <section class="hero-background">
         <div class="hero-content">
-            <h1>Your Property, Our Priority.</h1>
-            <a href="{{ url_for('contact') }}" class="btn-enquiry">Partner with Us Today!</a>        </div>
+            <div class="hero-text">
+                <h1>Your Property, Our Priority.</h1>
+                <p>Young Properties Investment Ltd is a trusted partner for your property needs.</p>
+                <div class="hero-actions">
+                    <a href="{{ url_for('contact') }}" class="btn-enquiry">Partner with Us Today!</a>
+                </div>
+            </div>
+        </div>
     </section>
+    
+    
+    
     {% endif %}
 
     <main>
