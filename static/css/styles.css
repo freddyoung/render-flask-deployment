@@ -67,6 +67,8 @@ body.default-page main {
     border-bottom: 1px solid transparent; /* Fallback for older browsers */
     border-image: linear-gradient(to right, transparent, #C0C0C0, transparent) 1;
     transition: background-color 0.1s ease, color 0.01s ease;
+
+
 }
 
 .navbar-home.scrolled {
@@ -87,6 +89,7 @@ body.default-page main {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Logo styles */
@@ -314,11 +317,15 @@ body.default-page .burger-menu span {
 .hero-text p {
     font-size: 18px;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .hero-actions {
     margin-top: 20px; /* Space between paragraph and button */
-    align-self: flex-start; /* Align button to the left */
+    align-items: flex-start; /* Align button to the left */
+    display: flex; /* Use flex to align items horizontally */
+    flex-direction: column;
 }
 
 .btn-enquiry {
@@ -358,6 +365,47 @@ body.default-page .burger-menu span {
         font-size: 48px;
 
     }
+}
+.scroll-indicator {
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    padding: 10px 8px; /* Less horizontal padding */
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Large enough for a pill shape */
+    height: 35px; /* Set a height for the vertical pill shape */
+    
+}
+.scroll-icon {
+    width: 1px; /* Width of the icon */
+    height: 8px; /* Height of the icon */
+    border: 1px solid white; /* Color of the icon */
+    position: relative;
+    animation: move 2s ease-in infinite; /* Smooth movement */
+}
+.scroll-text {
+    color: rgba(255, 255, 255, 0.753); /* Text color */
+    margin-left: 15px; /* Space between icon and text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+@keyframes move {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px); /* Move up */
+    }
+    100% {
+        transform: translateY(5px); /* Move back down */
+    }
+}
+
+.scroll-container {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center vertically */
+    padding-top: 55px; /* Space between button and scroll elements */
+    margin-left: 5px;
 }
 
 
@@ -476,12 +524,16 @@ footer p {
 .about-left h2 {
     font-size: 32px;
     color: #16b34d;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .about-left h3 {
     font-size: 48px;
     color: #333;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 /* Styling for Paragraph */
@@ -490,6 +542,8 @@ footer p {
     line-height: 1.6;
     color: #333;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 /* Button Styling */
@@ -610,6 +664,8 @@ footer p {
     font-size: 22px;
     color: #16b34d;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .service-item:hover p {
