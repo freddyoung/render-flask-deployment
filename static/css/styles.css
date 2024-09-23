@@ -498,7 +498,7 @@ footer p {
 /* General About Section Styling */
 .about-section {
     padding: 60px 20px;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     border-top-left-radius: 20px;  /* Apply border radius to top left */
     border-top-right-radius: 20px; /* Apply border radius to top right */
     border-bottom-left-radius: 0;  /* No radius on bottom left */
@@ -661,7 +661,7 @@ footer p {
 }
 
 .service-item p {
-    font-size: 22px;
+    font-size: 18px;
     color: #16b34d;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -708,61 +708,57 @@ footer p {
     }
 }
 
-
-/* Ensure the Swiper container has a relative position */
-.swiper-container {
-    position: relative; /* Ensure the buttons stay inside the slider */
-    width: 80%;         /* Adjust width to 80% of the page */
-    max-width: 1200px;  /* Optional: set a max width */
-    height: 400px;      /* Set a fixed height for the slider */
-    margin: 0 auto;     /* Center the slider horizontally */
-    overflow: hidden;   /* Prevent overflow */
-    padding-top: 20px;
-}
-
-/* Adjust navigation buttons */
-.swiper-button-next, .swiper-button-prev {
-    color: #fff;       /* Ensure buttons are visible */
-    position: absolute;
-    top: 50%;          /* Center vertically */
-    width: 40px;
-    height: 40px;
-    margin-top: -20px; /* Adjust based on button size */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%; /* Make buttons round */
-}
-
-.swiper-button-next {
-    right: 10px;       /* Position on the right */
-}
-
-.swiper-button-prev {
-    left: 10px;        /* Position on the left */
-}
-
-/* Optional hover effect */
-.swiper-button-next:hover, .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
-}
-/* Adjust the images in the swiper slides */
-.swiper-slide img {
-    width: 100%;       /* Make the image responsive */
-    height: 100%;      /* Ensures the image fills the container */
-    object-fit: contain; /* Use 'contain' to fit the image without zooming */
-    max-height: 100%;  /* Prevent the image from being too large */
-}
-
-/* Adjust the swiper pagination dots */
-/* Override the default Swiper pagination dots with higher specificity */
-.swiper-container .swiper-pagination-bullet {
-    background-color: #16b34d !important; /* Green for the dots */
-    opacity: 0.5; /* Make them slightly transparent */
-}
-
-.swiper-container .swiper-pagination-bullet-active {
-    background-color: #128239 !important; /* Darker green for the active dot */
-    opacity: 1; /* Fully opaque active dot */
-}
-
-
-
+/* Slider container */
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: auto; /* Adjust this to your needs */
+    overflow: hidden;
+    background-color: #128239;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  
+  /* Each slide */
+  .slide {
+    flex: 1; /* All slides take up equal width initially */
+    margin: 0 10px; /* Space between slides */
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.5s ease, transform 0.5s ease;
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .slider-container:hover .slide {
+    flex: 0.9; /* All slides shrink slightly on hover */
+  }
+  
+  .slider-container .slide:hover {
+    flex: 1.8; /* Expand the hovered slide */
+    transform: scale(1.05); /* Add slight zoom effect */
+  }
+  
+  /* After mouse leaves the container */
+  .slider-container:not(:hover) .slide {
+    transition: flex 0.8s ease;
+  }
+  @media (max-width: 1024px) {
+    .slider-container .slide {
+      flex: 1 !important; /* All slides remain the same width */
+      transform: none !important; /* Disable the scaling effect */
+      transition: none; /* Remove transition effects */
+    }
+  
+    .slider-container:hover .slide {
+      flex: 1; /* No flex adjustment on hover */
+    }
+  
+    .slider-container .slide:hover {
+      flex: 1; /* No hover effect */
+      transform: none; /* Disable any zoom effect */
+    }
+  }

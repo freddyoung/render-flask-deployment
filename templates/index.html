@@ -35,19 +35,19 @@
             <div class="services-list">
                 <a href="{{ url_for('services') }}" class="service-item">
                     <img src="{{ url_for('static', filename='images/manage.png') }}" alt="Property Management">
-                    <p>Property Management</p>
+                    <p>PROPERTY MANAGEMENT</p>
                 </a>
                 <a href="{{ url_for('services') }}" class="service-item">
                     <img src="{{ url_for('static', filename='images/construction.png') }}" alt="Construction Services">
-                    <p>Construction Services</p>
+                    <p>CONSTRUCTION</p>
                 </a>
                 <a href="{{ url_for('services') }}" class="service-item">
                     <img src="{{ url_for('static', filename='images/ppp.png') }}" alt="Maintenance & Repairs">
-                    <p>Maintenance & Repairs</p>
+                    <p>MAINTENANCE</p>
                 </a>
                 <a href="{{ url_for('services') }}" class="service-item">
                     <img src="{{ url_for('static', filename='images/qqq.png') }}" alt="Tenant Relations">
-                    <p>Tenant Relations</p>
+                    <p>TENANT RELATIONS</p>
                 </a>
             </div>
         </div>
@@ -55,46 +55,6 @@
 </section>
 
 
-<section class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="{{ url_for('static', filename='images/m1.jpg') }}" alt="Construction Image 1" class="w-full h-auto">
-        </div>
-        <div class="swiper-slide">
-            <img src="{{ url_for('static', filename='images/m2.jpg') }}" alt="Construction Image 2" class="w-full h-auto">
-        </div>
-        <div class="swiper-slide">
-            <img src="{{ url_for('static', filename='images/m3.jpg') }}" alt="Maintenance Image 1" class="w-full h-auto">
-        </div>
-        <div class="swiper-slide">
-            <img src="{{ url_for('static', filename='images/m4.jpg') }}" alt="Maintenance Image 1" class="w-full h-auto">
-        </div>
-    </div>
-    
-
-    <!-- Swiper pagination dots -->
-    <div class="swiper-pagination"></div>
-</section>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,   // Enables clicking on dots to navigate
-            },
-            autoplay: {
-                delay: 3000, // Automatically transition every 3 seconds
-            },
-        });
-    });
-</script>
 
 
 
@@ -121,5 +81,19 @@
         handleScroll(); // Run once to catch elements already in view
     });
 </script>
+
+
+<div class="slider-container">
+    <div class="slide">
+        <img src="{{ url_for('static', filename='images/m4.jpg') }}" alt="Image 1">
+    </div>
+    <div class="slide">
+        <img src="{{ url_for('static', filename='images/m2.jpg') }}" alt="Image 2">
+    </div>
+    <div class="slide">
+        <img src="{{ url_for('static', filename='images/m3.jpg') }}" alt="Image 3">
+    </div>
+</div>
+
 
 {% endblock %}
