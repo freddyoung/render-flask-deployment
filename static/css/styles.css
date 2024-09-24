@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    max-width: 100vw;
+    max-width: 100%;
 
 }
 section {
@@ -522,9 +522,10 @@ footer p {
 
 /* Styling for Heading and Subheading */
 .about-left h2 {
-    font-size: 32px;
+    font-size: 26px;
     color: #16b34d;
     font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 
 }
 
@@ -586,7 +587,7 @@ footer p {
 /* General Services Overview Styling */
 .services-overview {
     padding: 40px 0;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
 }
 
 .services-content {
@@ -711,25 +712,26 @@ footer p {
 /* Slider container */
 .slider-container {
     display: flex;
-    width: 100%;
     height: auto; /* Adjust this to your needs */
     overflow: hidden;
-    background-color: #128239;
+    background-color: #6dc98d7e;
     margin: 0;
     padding: 0;
     width: 100vw;
+    border-radius: 20px;
   }
   
   /* Each slide */
-  .slide {
+  .slide img {
     flex: 1; /* All slides take up equal width initially */
-    margin: 0 10px; /* Space between slides */
+    margin: 60 0px; /* Space between slides */
     background-size: cover;
     background-position: center;
     transition: flex 0.5s ease, transform 0.5s ease;
     border-radius: 15px; /* Rounded corners */
     position: relative;
     cursor: pointer;
+
   }
   
   /* Hover effect */
@@ -738,8 +740,8 @@ footer p {
   }
   
   .slider-container .slide:hover {
-    flex: 1.8; /* Expand the hovered slide */
-    transform: scale(1.05); /* Add slight zoom effect */
+    flex-grow: 1; /* Expand the hovered slide */
+    transform: scaleY(1); /* Add slight zoom effect */
   }
   
   /* After mouse leaves the container */
